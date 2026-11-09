@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier · Responsive Frontend Interface</title>
+  <meta name="description" content="A mobile-first, accessible, framework-free responsive interface built with semantic HTML5, CSS Grid, Flexbox, Container Queries and vanilla JavaScript.">
+  <meta name="theme-color" content="#F2F0EA">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A58B6F'/%3E%3Cpath d='M8 23 16 8l8 15z' fill='none' stroke='%23F2F0EA' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Atelier home">
+        <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 23 16 8l8 15z" fill="none" stroke="var(--c-grey)" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand__name">Atelier</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a href="#library">Library</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn--ghost theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Digital Craftsmanship</p>
+          <h1 id="hero-title">Build the future,<br> one breakpoint at a time.</h1>
+          <p class="lead">A framework-free interface that adapts to any screen. Semantic structure, fluid type and warm, grounded design, made for everyone.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#library">Explore the library</a>
+            <a class="btn btn--ghost" href="#roadmap">See the roadmap</a>
+          </div>
+        </div>
+
+        <figure class="hero__visual">
+          <svg viewBox="0 0 420 320" role="img" aria-labelledby="hero-art-title hero-art-desc">
+            <title id="hero-art-title">Responsive layout illustration</title>
+            <desc id="hero-art-desc">A desktop monitor, tablet and phone showing the same page at different sizes.</desc>
+            <rect x="20" y="20" width="260" height="172" rx="12" fill="var(--c-surface)" stroke="var(--c-mocha)" stroke-width="4"/>
+            <rect x="36" y="38" width="228" height="14" rx="4" fill="var(--c-blue)"/>
+            <rect x="36" y="64" width="228" height="56" rx="6" fill="var(--c-mocha)" opacity=".55"/>
+            <rect x="36" y="132" width="68" height="44" rx="6" fill="var(--c-blue)"/>
+            <rect x="116" y="132" width="68" height="44" rx="6" fill="var(--c-blue)"/>
+            <rect x="196" y="132" width="68" height="44" rx="6" fill="var(--c-blue)"/>
+            <rect x="130" y="192" width="20" height="28" fill="var(--c-mocha)"/>
+            <rect x="100" y="218" width="80" height="10" rx="5" fill="var(--c-mocha)"/>
+            <rect x="238" y="110" width="104" height="150" rx="12" fill="var(--c-surface)" stroke="var(--c-mocha)" stroke-width="4"/>
+            <rect x="252" y="126" width="76" height="10" rx="3" fill="var(--c-blue)"/>
+            <rect x="252" y="146" width="76" height="40" rx="5" fill="var(--c-mocha)" opacity=".55"/>
+            <rect x="252" y="196" width="34" height="40" rx="5" fill="var(--c-blue)"/>
+            <rect x="294" y="196" width="34" height="40" rx="5" fill="var(--c-blue)"/>
+            <rect x="320" y="150" width="70" height="140" rx="12" fill="var(--c-surface)" stroke="var(--c-mocha)" stroke-width="4"/>
+            <rect x="332" y="166" width="46" height="8" rx="3" fill="var(--c-blue)"/>
+            <rect x="332" y="182" width="46" height="30" rx="4" fill="var(--c-mocha)" opacity=".55"/>
+            <rect x="332" y="222" width="46" height="14" rx="4" fill="var(--c-blue)"/>
+            <rect x="332" y="244" width="46" height="14" rx="4" fill="var(--c-blue)"/>
+          </svg>
+          <figcaption class="visually-hidden">One layout, three screens.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="section" id="vision" aria-labelledby="vision-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">The Vision</p>
+          <h2 id="vision-title">Architecting for the mobile web</h2>
+        </header>
+
+        <div class="split">
+          <article class="card">
+            <h3>Core goal</h3>
+            <p>Construct a digital experience that honors the Mobile-First paradigm: start with the smallest screen, then expand.</p>
+            <h3>The philosophy</h3>
+            <p>The web is a dynamic, inclusive information system. Layouts should adapt to people, not the other way around.</p>
+          </article>
+
+          <aside class="card card--tinted" aria-labelledby="standards-title">
+            <h3 id="standards-title">The standards</h3>
+            <ul class="check-list">
+              <li><strong>Semantic integrity:</strong> code that screen readers, search engines and AI can parse.</li>
+              <li><strong>2025 UI/UX compliance:</strong> warm, grounded aesthetics over sterile tech.</li>
+              <li><strong>Universal access:</strong> strict WCAG adherence.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="section section--alt" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">The Toolkit</p>
+          <h2 id="toolkit-title">Your raw materials</h2>
+        </header>
+
+        <ul class="grid-3" role="list">
+          <li class="card tool">
+            <h3>HTML5 <span class="tool__tag">The Infrastructure</span></h3>
+            <p>Semantic landmarks and structural meaning. Not just divs, but the right element for the right job.</p>
+          </li>
+          <li class="card tool">
+            <h3>CSS3 <span class="tool__tag">The Skin</span></h3>
+            <p>Responsive styling using Grid, Flexbox and Container Queries.</p>
+          </li>
+          <li class="card tool">
+            <h3>JavaScript <span class="tool__tag">The Logic</span></h3>
+            <p>Basic state management and interactive functionality.</p>
+          </li>
+        </ul>
+
+        <p class="mandate"><strong>The mandate:</strong> no frameworks. Master the fundamentals first.</p>
+      </div>
+    </section>
+
+    <!-- LIBRARY (interactive) -->
+    <section class="section" id="library" aria-labelledby="library-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Content Grid</p>
+          <h2 id="library-title">The design library</h2>
+          <p class="lead">Search, filter and save the pillars of a well-built interface. Your saved items persist in your browser.</p>
+        </header>
+
+        <form class="toolbar" role="search" aria-label="Filter library" id="filter-form" novalidate>
+          <div class="field">
+            <label for="search">Search</label>
+            <input id="search" name="search" type="search" placeholder="e.g. grid, color, audit" autocomplete="off">
+          </div>
+
+          <fieldset class="chips">
+            <legend>Category</legend>
+            <label class="chip"><input type="radio" name="category" value="all" checked><span>All</span></label>
+            <label class="chip"><input type="radio" name="category" value="strategy"><span>Strategy</span></label>
+            <label class="chip"><input type="radio" name="category" value="design"><span>Design</span></label>
+            <label class="chip"><input type="radio" name="category" value="build"><span>Build</span></label>
+          </fieldset>
+
+          <label class="check">
+            <input type="checkbox" id="saved-only">
+            <span>Saved only <span class="count" id="saved-count" aria-label="saved items">0</span></span>
+          </label>
+        </form>
+
+        <p class="status" id="results-status" role="status" aria-live="polite"></p>
+
+        <div class="library" id="library-grid">
+          <!-- Cards rendered by js/main.js (the static fallback below is replaced) -->
+          <noscript><p>Please enable JavaScript to use the interactive library.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section section--alt" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">The Execution Roadmap</p>
+          <h2 id="roadmap-title">Six steps from idea to audit</h2>
+        </header>
+
+        <ol class="roadmap">
+          <li><span class="roadmap__num" aria-hidden="true">1</span><h3>Discovery</h3><p>Define the “How Might We”.</p></li>
+          <li><span class="roadmap__num" aria-hidden="true">2</span><h3>Wireframe</h3><p>Grayscale, mobile-first.</p></li>
+          <li><span class="roadmap__num" aria-hidden="true">3</span><h3>Semantics</h3><p>HTML landmarks.</p></li>
+          <li><span class="roadmap__num" aria-hidden="true">4</span><h3>Style</h3><p>CSS Grid/Flex and the 2025 palette.</p></li>
+          <li><span class="roadmap__num" aria-hidden="true">5</span><h3>Logic</h3><p>State and interactivity.</p></li>
+          <li><span class="roadmap__num" aria-hidden="true">6</span><h3>Audit</h3><p>LCP/CLS and accessibility.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact card card--tinted">
+          <header>
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Share your feedback</h2>
+            <p>Tell us what you think of the interface. This demo validates in the browser and does not send data anywhere.</p>
+          </header>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+              <p class="field__error" id="name-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+              <p class="field__error" id="email-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required minlength="10" aria-describedby="message-err"></textarea>
+              <p class="field__error" id="message-err" hidden></p>
+            </div>
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Atelier. Built with HTML, CSS and JavaScript. No frameworks.</p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+</body>
+</html>
